@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4FDC61111DF8E7030049E4A8 /* TMDbClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDC61071DF8E7030049E4A8 /* TMDbClient.framework */; };
+		4FDC61161DF8E7030049E4A8 /* TMDbClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDC61151DF8E7030049E4A8 /* TMDbClientTests.swift */; };
+		4FDC61181DF8E7030049E4A8 /* TMDbClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FDC610A1DF8E7030049E4A8 /* TMDbClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4FDC61121DF8E7030049E4A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FDC60FE1DF8E7030049E4A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FDC61061DF8E7030049E4A8;
+			remoteInfo = TMDbClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4FDC61071DF8E7030049E4A8 /* TMDbClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TMDbClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FDC610A1DF8E7030049E4A8 /* TMDbClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDbClient.h; sourceTree = "<group>"; };
+		4FDC610B1DF8E7030049E4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FDC61101DF8E7030049E4A8 /* TMDbClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMDbClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FDC61151DF8E7030049E4A8 /* TMDbClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDbClientTests.swift; sourceTree = "<group>"; };
+		4FDC61171DF8E7030049E4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4FDC61031DF8E7030049E4A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FDC610D1DF8E7030049E4A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FDC61111DF8E7030049E4A8 /* TMDbClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4FDC60FD1DF8E7030049E4A8 = {
+			isa = PBXGroup;
+			children = (
+				4FDC61091DF8E7030049E4A8 /* TMDbClient */,
+				4FDC61141DF8E7030049E4A8 /* TMDbClientTests */,
+				4FDC61081DF8E7030049E4A8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4FDC61081DF8E7030049E4A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4FDC61071DF8E7030049E4A8 /* TMDbClient.framework */,
+				4FDC61101DF8E7030049E4A8 /* TMDbClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4FDC61091DF8E7030049E4A8 /* TMDbClient */ = {
+			isa = PBXGroup;
+			children = (
+				4FDC610A1DF8E7030049E4A8 /* TMDbClient.h */,
+				4FDC610B1DF8E7030049E4A8 /* Info.plist */,
+			);
+			path = TMDbClient;
+			sourceTree = "<group>";
+		};
+		4FDC61141DF8E7030049E4A8 /* TMDbClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				4FDC61151DF8E7030049E4A8 /* TMDbClientTests.swift */,
+				4FDC61171DF8E7030049E4A8 /* Info.plist */,
+			);
+			path = TMDbClientTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4FDC61041DF8E7030049E4A8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FDC61181DF8E7030049E4A8 /* TMDbClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4FDC61061DF8E7030049E4A8 /* TMDbClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FDC611B1DF8E7030049E4A8 /* Build configuration list for PBXNativeTarget "TMDbClient" */;
+			buildPhases = (
+				4FDC61021DF8E7030049E4A8 /* Sources */,
+				4FDC61031DF8E7030049E4A8 /* Frameworks */,
+				4FDC61041DF8E7030049E4A8 /* Headers */,
+				4FDC61051DF8E7030049E4A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TMDbClient;
+			productName = TMDbClient;
+			productReference = 4FDC61071DF8E7030049E4A8 /* TMDbClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4FDC610F1DF8E7030049E4A8 /* TMDbClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FDC611E1DF8E7030049E4A8 /* Build configuration list for PBXNativeTarget "TMDbClientTests" */;
+			buildPhases = (
+				4FDC610C1DF8E7030049E4A8 /* Sources */,
+				4FDC610D1DF8E7030049E4A8 /* Frameworks */,
+				4FDC610E1DF8E7030049E4A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4FDC61131DF8E7030049E4A8 /* PBXTargetDependency */,
+			);
+			name = TMDbClientTests;
+			productName = TMDbClientTests;
+			productReference = 4FDC61101DF8E7030049E4A8 /* TMDbClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4FDC60FE1DF8E7030049E4A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Astrio, LLC";
+				TargetAttributes = {
+					4FDC61061DF8E7030049E4A8 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = YJY6342X8W;
+						ProvisioningStyle = Automatic;
+					};
+					4FDC610F1DF8E7030049E4A8 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = YJY6342X8W;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4FDC61011DF8E7030049E4A8 /* Build configuration list for PBXProject "TMDbClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4FDC60FD1DF8E7030049E4A8;
+			productRefGroup = 4FDC61081DF8E7030049E4A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4FDC61061DF8E7030049E4A8 /* TMDbClient */,
+				4FDC610F1DF8E7030049E4A8 /* TMDbClientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4FDC61051DF8E7030049E4A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FDC610E1DF8E7030049E4A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4FDC61021DF8E7030049E4A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FDC610C1DF8E7030049E4A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FDC61161DF8E7030049E4A8 /* TMDbClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4FDC61131DF8E7030049E4A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FDC61061DF8E7030049E4A8 /* TMDbClient */;
+			targetProxy = 4FDC61121DF8E7030049E4A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4FDC61191DF8E7030049E4A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4FDC611A1DF8E7030049E4A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4FDC611C1DF8E7030049E4A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YJY6342X8W;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TMDbClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.astrio.TMDbClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4FDC611D1DF8E7030049E4A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YJY6342X8W;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TMDbClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.astrio.TMDbClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		4FDC611F1DF8E7030049E4A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = YJY6342X8W;
+				INFOPLIST_FILE = TMDbClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.astrio.TMDbClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4FDC61201DF8E7030049E4A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = YJY6342X8W;
+				INFOPLIST_FILE = TMDbClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.astrio.TMDbClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4FDC61011DF8E7030049E4A8 /* Build configuration list for PBXProject "TMDbClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FDC61191DF8E7030049E4A8 /* Debug */,
+				4FDC611A1DF8E7030049E4A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FDC611B1DF8E7030049E4A8 /* Build configuration list for PBXNativeTarget "TMDbClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FDC611C1DF8E7030049E4A8 /* Debug */,
+				4FDC611D1DF8E7030049E4A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4FDC611E1DF8E7030049E4A8 /* Build configuration list for PBXNativeTarget "TMDbClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FDC611F1DF8E7030049E4A8 /* Debug */,
+				4FDC61201DF8E7030049E4A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4FDC60FE1DF8E7030049E4A8 /* Project object */;
+}
