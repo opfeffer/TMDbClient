@@ -14,6 +14,7 @@
 		4FDC61301DF8F4390049E4A8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDC612D1DF8F4390049E4A8 /* Alamofire.framework */; };
 		4FDC61311DF8F4390049E4A8 /* PMKAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDC612E1DF8F4390049E4A8 /* PMKAlamofire.framework */; };
 		4FDC61321DF8F4390049E4A8 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDC612F1DF8F4390049E4A8 /* PromiseKit.framework */; };
+		4FDC61341DF918070049E4A8 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDC61331DF918070049E4A8 /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		4FDC612D1DF8F4390049E4A8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Carthage/Checkouts/Alamofire/build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		4FDC612E1DF8F4390049E4A8 /* PMKAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PMKAlamofire.framework; path = "Carthage/Checkouts/Alamofire-/build/Debug/PMKAlamofire.framework"; sourceTree = "<group>"; };
 		4FDC612F1DF8F4390049E4A8 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Checkouts/PromiseKit/build/Debug/PromiseKit.framework; sourceTree = "<group>"; };
+		4FDC61331DF918070049E4A8 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Sources/Configuration.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				4FDC610B1DF8E7030049E4A8 /* Info.plist */,
 				4FDC610A1DF8E7030049E4A8 /* TMDbClient.h */,
 				4FDC61271DF8EBAD0049E4A8 /* TMDbClient.swift */,
+				4FDC61331DF918070049E4A8 /* Configuration.swift */,
 			);
 			name = Sources;
 			path = TMDbClient;
@@ -242,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FDC61341DF918070049E4A8 /* Configuration.swift in Sources */,
 				4FDC61281DF8EBAD0049E4A8 /* TMDbClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
