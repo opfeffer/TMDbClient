@@ -1,0 +1,6 @@
+# Alamofire for simple networking
+github "Alamofire/Alamofire" ~> 4.0
+
+# Promises and Futures to make async work a breeze.
+github "mxcl/PromiseKit" ~> 4.0
+
