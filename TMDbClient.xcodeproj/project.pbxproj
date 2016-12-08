@@ -10,6 +10,10 @@
 		4FDC61111DF8E7030049E4A8 /* TMDbClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDC61071DF8E7030049E4A8 /* TMDbClient.framework */; };
 		4FDC61161DF8E7030049E4A8 /* TMDbClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDC61151DF8E7030049E4A8 /* TMDbClientTests.swift */; };
 		4FDC61181DF8E7030049E4A8 /* TMDbClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FDC610A1DF8E7030049E4A8 /* TMDbClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FDC61281DF8EBAD0049E4A8 /* TMDbClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDC61271DF8EBAD0049E4A8 /* TMDbClient.swift */; };
+		4FDC61301DF8F4390049E4A8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDC612D1DF8F4390049E4A8 /* Alamofire.framework */; };
+		4FDC61311DF8F4390049E4A8 /* PMKAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDC612E1DF8F4390049E4A8 /* PMKAlamofire.framework */; };
+		4FDC61321DF8F4390049E4A8 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDC612F1DF8F4390049E4A8 /* PromiseKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,8 +28,8 @@
 
 /* Begin PBXFileReference section */
 		4FDC61071DF8E7030049E4A8 /* TMDbClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TMDbClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FDC610A1DF8E7030049E4A8 /* TMDbClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TMDbClient.h; path = ../Sources/TMDbClient.h; sourceTree = "<group>"; };
-		4FDC610B1DF8E7030049E4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Sources/Info.plist; sourceTree = "<group>"; };
+		4FDC610A1DF8E7030049E4A8 /* TMDbClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TMDbClient.h; path = Sources/TMDbClient.h; sourceTree = SOURCE_ROOT; };
+		4FDC610B1DF8E7030049E4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Info.plist; sourceTree = SOURCE_ROOT; };
 		4FDC61101DF8E7030049E4A8 /* TMDbClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMDbClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FDC61151DF8E7030049E4A8 /* TMDbClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TMDbClientTests.swift; path = ../Tests/TMDbClientTests.swift; sourceTree = "<group>"; };
 		4FDC61171DF8E7030049E4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Tests/Info.plist; sourceTree = "<group>"; };
@@ -34,6 +38,10 @@
 		4FDC61241DF8E8410049E4A8 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4FDC61251DF8E8410049E4A8 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		4FDC61261DF8E8C80049E4A8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4FDC61271DF8EBAD0049E4A8 /* TMDbClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TMDbClient.swift; path = Sources/TMDbClient.swift; sourceTree = SOURCE_ROOT; };
+		4FDC612D1DF8F4390049E4A8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Carthage/Checkouts/Alamofire/build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		4FDC612E1DF8F4390049E4A8 /* PMKAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PMKAlamofire.framework; path = "Carthage/Checkouts/Alamofire-/build/Debug/PMKAlamofire.framework"; sourceTree = "<group>"; };
+		4FDC612F1DF8F4390049E4A8 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Checkouts/PromiseKit/build/Debug/PromiseKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FDC61321DF8F4390049E4A8 /* PromiseKit.framework in Frameworks */,
+				4FDC61301DF8F4390049E4A8 /* Alamofire.framework in Frameworks */,
+				4FDC61311DF8F4390049E4A8 /* PMKAlamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,8 +87,9 @@
 		4FDC61091DF8E7030049E4A8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				4FDC610A1DF8E7030049E4A8 /* TMDbClient.h */,
 				4FDC610B1DF8E7030049E4A8 /* Info.plist */,
+				4FDC610A1DF8E7030049E4A8 /* TMDbClient.h */,
+				4FDC61271DF8EBAD0049E4A8 /* TMDbClient.swift */,
 			);
 			name = Sources;
 			path = TMDbClient;
@@ -101,9 +113,20 @@
 				4FDC61241DF8E8410049E4A8 /* LICENSE */,
 				4FDC61251DF8E8410049E4A8 /* Package.swift */,
 				4FDC61261DF8E8C80049E4A8 /* README.md */,
+				4FDC612C1DF8F4390049E4A8 /* Frameworks */,
 				4FDC61081DF8E7030049E4A8 /* Products */,
 			);
 			name = ...;
+			sourceTree = "<group>";
+		};
+		4FDC612C1DF8F4390049E4A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FDC612D1DF8F4390049E4A8 /* Alamofire.framework */,
+				4FDC612E1DF8F4390049E4A8 /* PMKAlamofire.framework */,
+				4FDC612F1DF8F4390049E4A8 /* PromiseKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +192,7 @@
 					4FDC61061DF8E7030049E4A8 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = YJY6342X8W;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					4FDC610F1DF8E7030049E4A8 = {
@@ -218,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FDC61281DF8EBAD0049E4A8 /* TMDbClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +283,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -311,6 +337,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -342,6 +369,7 @@
 		4FDC611C1DF8E7030049E4A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = YJY6342X8W;
@@ -354,6 +382,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.astrio.TMDbClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -361,6 +390,7 @@
 		4FDC611D1DF8E7030049E4A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = YJY6342X8W;
@@ -380,6 +410,7 @@
 		4FDC611F1DF8E7030049E4A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = YJY6342X8W;
 				INFOPLIST_FILE = TMDbClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -392,6 +423,7 @@
 		4FDC61201DF8E7030049E4A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = YJY6342X8W;
 				INFOPLIST_FILE = TMDbClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -420,6 +452,7 @@
 				4FDC611D1DF8E7030049E4A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4FDC611E1DF8E7030049E4A8 /* Build configuration list for PBXNativeTarget "TMDbClientTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +461,7 @@
 				4FDC61201DF8E7030049E4A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
