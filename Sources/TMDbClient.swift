@@ -11,55 +11,14 @@ import Alamofire
 import PromiseKit
 import PMKAlamofire
 
-public typealias Token = String
-
-public enum TCError: Error {
-    /// Don't forget to call `initialize(with:)`?
-    case uninitialized
-
-    case badUrl
-}
-
-
-struct TokenManager : RequestAdapter {
-    let token: Token
-
-    func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
-        guard let url = urlRequest.url else { throw TCError.badUrl }
-        guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else { throw TCError.badUrl }
-
-        let apiKey = URLQueryItem(name: "api_key", value: token)
-        var queryItems = components.queryItems ?? []
-        queryItems.append(apiKey)
-        components.queryItems = queryItems
-
-        var urlRequest = urlRequest
-        urlRequest.url = try components.asURL()
-
-        return urlRequest
-    }
-}
-
-enum Router : URLRequestConvertible {
-    static let baseUrlString = "https://api.themoviedb.org/3"
-
-    case configuration
-
-
-    func asURLRequest() throws -> URLRequest {
-        let result: (path: String, parameters: Parameters) = {
-            return ("/configuration", [:])
-        }()
-
-        let url = try Router.baseUrlString.asURL()
-        let urlRequest = URLRequest(url: url.appendingPathComponent(result.path))
-
-        return try URLEncoding.default.encode(urlRequest, with: result.parameters)
-    }
-
-}
-
 public class TMDbClient {
+
+    public enum Error: Swift.Error {
+        /// Don't forget to call `initialize(with:)`
+        case uninitialized
+
+        case badUrl
+    }
 
     public private(set) static var token: Token = "" {
         didSet {
@@ -67,7 +26,12 @@ public class TMDbClient {
         }
     }
 
-    static var sessionManager: SessionManager = SessionManager.default
+    static var sessionManager: SessionManager = {
+        let configuration = URLSessionConfiguration.default
+        configuration.urlCache = URLCache(memoryCapacity: 5 * 1024 * 1024, diskCapacity: 100 * 1024 * 1024, diskPath: "com.opfeffer.TMDbClient")
+
+        return SessionManager(configuration: configuration)
+    }()
 
     /// Initializes the client with your TMDb-provided access token.
     ///
@@ -79,7 +43,7 @@ public class TMDbClient {
         return configuration.asVoid().catch { _ in }
     }
 
-    static var configuration: Promise<Configuration> = Promise(error: TCError.uninitialized)
+    static var configuration: Promise<Configuration> = Promise(error: Error.uninitialized)
 
     // MARK: API Requests
 
@@ -90,6 +54,54 @@ public class TMDbClient {
                 print(json)
                 return try Configuration(json: json)
         }
+    }
+
+}
+
+// MARK: - Nested Types
+
+extension TMDbClient {
+
+    public typealias Token = String
+
+    struct TokenManager: RequestAdapter {
+        let token: Token
+
+        func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
+            guard let url = urlRequest.url, var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else { throw TMDbClient.Error.badUrl }
+            let apiKey = URLQueryItem(name: "api_key", value: token)
+
+            let queryItems = components.queryItems ?? []
+            components.queryItems = queryItems + [apiKey]
+
+            var urlRequest = urlRequest
+            urlRequest.url = try components.asURL()
+            
+            return urlRequest
+        }
+    }
+
+
+    enum Router: URLRequestConvertible {
+        static let baseUrl = URL(string: "https://api.themoviedb.org/3")!
+
+        case configuration
+
+        var path: String {
+            return "/configuration"
+        }
+
+        var parameters: Parameters? {
+            return nil
+        }
+
+        func asURLRequest() throws -> URLRequest {
+            let url = Router.baseUrl.appendingPathComponent(path)
+            let urlRequest = URLRequest(url: url)
+
+            return try URLEncoding.default.encode(urlRequest, with: parameters)
+        }
+        
     }
 
 }
