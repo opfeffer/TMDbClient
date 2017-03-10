@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Configuration {
+public struct Configuration: JSONInitializing {
 
-    init(json: Any) throws {
-
+    init(json: JSON) throws {
+        
     }
 }

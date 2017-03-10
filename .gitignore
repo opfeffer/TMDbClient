@@ -3,4 +3,5 @@ xcuserdata/
 /Carthage
 /Cartfile.resolved
 /.build
+DerivedData
 .DS_Store

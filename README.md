@@ -14,10 +14,18 @@ github 'opfeffer/TMDbClient' ~> 1.0
 
 ## Getting started
 
-// TBD
+In your `AppDelegate` initialize the TMDbClient library by calling
 
-[badge-swift]: https://img.shields.io/badge/swift%20version-3.0-green.svg
+```
+TMDbClient.initialize(with: {your_api_key_here})
+```
+
+[badge-swift]: https://img.shields.io/badge/swift%20version-3.1-green.svg
 [badge-carthage]: https://img.shields.io/badge/compatible-carthage-brightgreen.svg
 [badge-platforms]: https://img.shields.io/badge/platforms-iOS-lightgrey.svg
 [themoviedb.org]: http://api.themoviedb.org
 [carthage]: https://github.com/Carthage/Carthage
+
+
+## Todos:
+[ ] build recovery mechanism for `/configuration` request timeouts.
