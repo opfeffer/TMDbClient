@@ -62,6 +62,7 @@ public class URLJSONPromise: Promise<Transmission> {
 
 }
 
+/// Promisifying URLSession.
 extension URLSession {
     /// Makes a HTTP request using the parameters specified by the provided URL request.
     public func jsonTask(with request: URLRequest) -> URLJSONPromise {

@@ -1,4 +1,4 @@
-# TMDbClient - Access themoviedb.org with Swift
+# TMDbClient - themoviedb.org with Swift
 
 ![badge-swift] ![badge-carthage] ![badge-platforms]
 
@@ -14,7 +14,7 @@ github 'opfeffer/TMDbClient' ~> 1.0
 
 ## Getting started
 
-In your `AppDelegate` initialize the TMDbClient library by calling
+In your `AppDelegate` initialize the _TMDbClient_ library by calling
 
 ```
 TMDbClient.initialize(with: {your_api_key_here})
@@ -26,6 +26,9 @@ TMDbClient.initialize(with: {your_api_key_here})
 [themoviedb.org]: http://api.themoviedb.org
 [carthage]: https://github.com/Carthage/Carthage
 
+## Unavailable Features
+
+Currently, this library only provides read-access to TMDb contents. User Authentication/Guest Sessions are not supported at this time.  
 
 ## Todos:
-[ ] build recovery mechanism for `/configuration` request timeouts.
+- [ ] build recovery mechanism for `/configuration` request timeouts.

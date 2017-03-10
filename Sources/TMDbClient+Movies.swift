@@ -16,7 +16,7 @@ extension TMDbClient {
             case credits, releases, videos
         }
 
-        enum Router: TMDBRoute {
+        enum Router: TMDbRoute {
             case details(movieId: Int, appends: Set<Appends>)
 
             var path: String {

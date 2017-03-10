@@ -9,47 +9,53 @@
 import Foundation
 import PromiseKit
 
-
+/// Provides networking capabilities to interact with TMDb's APIs.
+///
+/// - Note: Make sure you initialize the library by providing your personal *TMDb API Key* via `initialize(with:)`
 public class TMDbClient {
 
+    /// TMDb base API domain.
     public private(set) static var baseUrl = URL(string: "https://api.themoviedb.org/3")!
+
+    /// User-provided API Key; set via `initialize(with:)`
     public private(set) static var apiKey: ApiKey = ""
 
+    /// Flag controlling HTTP request/response logging in the console.
     public private(set) static var logs: Bool = false
 
+    /// Underlying URLSession object; currently not publicly exposed.
     private(set) static var session: URLSession = {
         let configuration = URLSessionConfiguration.default
-        configuration.urlCache = URLCache(memoryCapacity: 5 * 1024 * 1024, diskCapacity: 100 * 1024 * 1024, diskPath: "com.opfeffer.TMDbClient")
+
+        let bundle = Bundle(for: TMDbClient.self)
+        let path = bundle.bundleIdentifier ?? String(describing: TMDbClient.self)
+        configuration.urlCache = URLCache(memoryCapacity: 5 * 1024 * 1024, diskCapacity: 100 * 1024 * 1024, diskPath: path)
 
         return URLSession(configuration: configuration)
     }()
 
-    /// Initializes the client with your TMDb-provided access token.
+    /// Initializes the client with your TMDb-provided API key.
     ///
     /// - note: call in application(_:didFinishLaunchingWithOptions:)
     public class func initialize(with apiKey: ApiKey, logs: Bool = false) -> Promise<Void> {
         self.logs = logs
 
         self.apiKey = apiKey
-        self.configuration = fetchConfiguration().catch { _ in }
+        self.configuration = getObject(Router.configuration).catch { _ in }
 
         return configuration.asVoid()
     }
 
+    /// Promise holding TMDb's system wide configuration information.
+    ///
+    /// Since some elements of the API require some knowledge of this configuration data, calling `initialize(with:)` will
+    /// fetch the latest `Configuration` from TMDb and chain all later requests to this promise.
     static public private(set) var configuration: Promise<Configuration> = Promise(error: Error.uninitialized).catch { _ in }
-
-    // MARK: API Requests
-
-    class func fetchConfiguration() -> Promise<Configuration> {
-        return get(Router.configuration).asDictionary().then { json -> Configuration in
-            return try Configuration(json: json)
-        }
-
-    }
 
     // MARK: Internal/Private methods
 
-    class func getObject<T: JSONInitializing>(_ route: TMDBRoute) -> Promise<T> {
+    /// Fetches JSON and attempts to initialize object adhering to `JSONInitializing`.
+    class func getObject<T: JSONInitializing>(_ route: TMDbRoute) -> Promise<T> {
         return get(route).then { (_, _, json) -> T in
             guard let json = json else { throw URLSessionError.noJSONPayload }
 
@@ -57,7 +63,8 @@ public class TMDbClient {
         }
     }
 
-    class func get(_ route: TMDBRoute) -> URLJSONPromise {
+    /// Returns `Transmission` data for a given TMDbRoute.
+    class func get(_ route: TMDbRoute) -> URLJSONPromise {
         do {
             let rq = try urlRequest(for: route)
             return session.jsonTask(with: rq).log()
@@ -66,7 +73,7 @@ public class TMDbClient {
         }
     }
 
-    private class func urlRequest(for route: TMDBRoute) throws -> URLRequest {
+    private class func urlRequest(for route: TMDbRoute) throws -> URLRequest {
         let url = baseUrl.appendingPathComponent(route.path)
         guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else { throw Error.badUrl }
 
@@ -84,16 +91,20 @@ public class TMDbClient {
 
 extension TMDbClient {
 
+    /// TMDb's API Key's are String-based.
     public typealias ApiKey = String
 
+    /// Global TMDbClient error domain.
     public enum Error: Swift.Error {
         /// Don't forget to call `initialize(with:)`
         case uninitialized
 
+        /// Indicates a given TMBdRoute is a malformed URL.
         case badUrl
     }
 
-    enum Router: TMDBRoute {
+    /// System wide routes; not namespace-specific.
+    enum Router: TMDbRoute {
         case configuration
 
         var path: String {
@@ -120,11 +131,13 @@ extension TMDbClient {
 // MARK: - URLJSONPromise Logger
 
 private extension URLJSONPromise {
+
+    /// Captures Request/Response information on a given `URLSession` `URLDataTask`; controlled via `TMDbClient.logs` flag.
     func log() -> URLJSONPromise {
         guard TMDbClient.logs == true else { return self }
 
         let date = Date()
-        return always(on: .global()) {
+        return always {
             print("\n")
             print("Request:", self.urlRequest?.debugDescription ?? "<unavailable> (represents bug!)")
 
