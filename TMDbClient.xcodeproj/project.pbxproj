@@ -12,6 +12,11 @@
 		4FD67E6E1E71F957009FC4AC /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD67E6D1E71F957009FC4AC /* Types.swift */; };
 		4FD67E701E721C03009FC4AC /* TMDbClient+Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD67E6F1E721C03009FC4AC /* TMDbClient+Movies.swift */; };
 		4FD67E721E72F2BC009FC4AC /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD67E711E72F2BC009FC4AC /* Movie.swift */; };
+		4FD67E741E74336D009FC4AC /* TMDbClient+People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD67E731E74336D009FC4AC /* TMDbClient+People.swift */; };
+		4FD67E761E7434A7009FC4AC /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD67E751E7434A7009FC4AC /* People.swift */; };
+		4FD67E781E75BEBD009FC4AC /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD67E771E75BEBD009FC4AC /* Credits.swift */; };
+		4FD67E7A1E75BF7C009FC4AC /* Foundation+TMDbClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD67E791E75BF7C009FC4AC /* Foundation+TMDbClient.swift */; };
+		4FD67E7D1E76D254009FC4AC /* TMDbDateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD67E7C1E76D254009FC4AC /* TMDbDateConverter.swift */; };
 		4FDC61111DF8E7030049E4A8 /* TMDbClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDC61071DF8E7030049E4A8 /* TMDbClient.framework */; };
 		4FDC61161DF8E7030049E4A8 /* TMDbClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDC61151DF8E7030049E4A8 /* TMDbClientTests.swift */; };
 		4FDC61181DF8E7030049E4A8 /* TMDbClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FDC610A1DF8E7030049E4A8 /* TMDbClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,6 +41,11 @@
 		4FD67E6D1E71F957009FC4AC /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Types.swift; path = Sources/Types.swift; sourceTree = SOURCE_ROOT; };
 		4FD67E6F1E721C03009FC4AC /* TMDbClient+Movies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TMDbClient+Movies.swift"; path = "Sources/TMDbClient+Movies.swift"; sourceTree = SOURCE_ROOT; };
 		4FD67E711E72F2BC009FC4AC /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = Sources/Movie.swift; sourceTree = SOURCE_ROOT; };
+		4FD67E731E74336D009FC4AC /* TMDbClient+People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TMDbClient+People.swift"; path = "Sources/TMDbClient+People.swift"; sourceTree = SOURCE_ROOT; };
+		4FD67E751E7434A7009FC4AC /* People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = People.swift; path = Sources/People.swift; sourceTree = SOURCE_ROOT; };
+		4FD67E771E75BEBD009FC4AC /* Credits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Credits.swift; path = Sources/Credits.swift; sourceTree = SOURCE_ROOT; };
+		4FD67E791E75BF7C009FC4AC /* Foundation+TMDbClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Foundation+TMDbClient.swift"; path = "Sources/Foundation+TMDbClient.swift"; sourceTree = SOURCE_ROOT; };
+		4FD67E7C1E76D254009FC4AC /* TMDbDateConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TMDbDateConverter.swift; path = Sources/TMDbDateConverter.swift; sourceTree = SOURCE_ROOT; };
 		4FDC61071DF8E7030049E4A8 /* TMDbClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TMDbClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FDC610A1DF8E7030049E4A8 /* TMDbClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TMDbClient.h; path = Sources/TMDbClient.h; sourceTree = SOURCE_ROOT; };
 		4FDC610B1DF8E7030049E4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Info.plist; sourceTree = SOURCE_ROOT; };
@@ -80,6 +90,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4FD67E7B1E75BF83009FC4AC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4FD67E791E75BF7C009FC4AC /* Foundation+TMDbClient.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		4FDC60FD1DF8E7030049E4A8 = {
 			isa = PBXGroup;
 			children = (
@@ -102,13 +120,18 @@
 			isa = PBXGroup;
 			children = (
 				4FDC61331DF918070049E4A8 /* Configuration.swift */,
+				4FD67E771E75BEBD009FC4AC /* Credits.swift */,
+				4FD67E7B1E75BF83009FC4AC /* Extensions */,
 				4FDC610B1DF8E7030049E4A8 /* Info.plist */,
+				4FD67E711E72F2BC009FC4AC /* Movie.swift */,
+				4FD67E751E7434A7009FC4AC /* People.swift */,
 				4FDC610A1DF8E7030049E4A8 /* TMDbClient.h */,
 				4FDC61271DF8EBAD0049E4A8 /* TMDbClient.swift */,
 				4FD67E6F1E721C03009FC4AC /* TMDbClient+Movies.swift */,
+				4FD67E731E74336D009FC4AC /* TMDbClient+People.swift */,
+				4FD67E7C1E76D254009FC4AC /* TMDbDateConverter.swift */,
 				4FD67E6D1E71F957009FC4AC /* Types.swift */,
 				4FD67E6B1E70DD83009FC4AC /* URLJSONPromise.swift */,
-				4FD67E711E72F2BC009FC4AC /* Movie.swift */,
 			);
 			name = Sources;
 			path = TMDbClient;
@@ -255,7 +278,12 @@
 				4FD67E701E721C03009FC4AC /* TMDbClient+Movies.swift in Sources */,
 				4FD67E721E72F2BC009FC4AC /* Movie.swift in Sources */,
 				4FD67E6C1E70DD83009FC4AC /* URLJSONPromise.swift in Sources */,
+				4FD67E761E7434A7009FC4AC /* People.swift in Sources */,
 				4FDC61281DF8EBAD0049E4A8 /* TMDbClient.swift in Sources */,
+				4FD67E7D1E76D254009FC4AC /* TMDbDateConverter.swift in Sources */,
+				4FD67E741E74336D009FC4AC /* TMDbClient+People.swift in Sources */,
+				4FD67E781E75BEBD009FC4AC /* Credits.swift in Sources */,
+				4FD67E7A1E75BF7C009FC4AC /* Foundation+TMDbClient.swift in Sources */,
 				4FD67E6E1E71F957009FC4AC /* Types.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

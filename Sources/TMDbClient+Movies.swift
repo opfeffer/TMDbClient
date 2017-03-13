@@ -17,10 +17,14 @@ extension TMDbClient {
         }
 
         enum Router: TMDbRoute {
-            case details(movieId: Int, appends: Set<Appends>)
+            case credits(movieId: Int)
+
+            case details(movieId: Int, appends: Set<Appends>?)
 
             var path: String {
                 switch self {
+                case .credits(let movieId):
+                    return "/movie/\(movieId)/credits"
                 case .details(let movieId, _):
                     return "/movie/\(movieId)"
                 }
@@ -28,7 +32,7 @@ extension TMDbClient {
 
             var parameters: Parameters? {
                 switch self {
-                case .details(_, let appends) where appends.isEmpty == false:
+                case .details(_, .some(let appends)) where appends.isEmpty == false:
                     let value = appends.map { $0.rawValue }.joined(separator: ",")
                     return ["append_to_response": value]
                 default:
@@ -38,8 +42,13 @@ extension TMDbClient {
         }
 
 
-        public static func details(movieId: Int, appends: Set<Appends> = []) -> Promise<Movie> {
+        public static func details(movieId: Int, appends: Set<Appends>? = nil) -> Promise<Movie> {
             let rq = Router.details(movieId: movieId, appends: appends)
+            return TMDbClient.getObject(rq)
+        }
+
+        public static func credits(movieId: Int) -> Promise<Credits> {
+            let rq = Router.credits(movieId: movieId)
             return TMDbClient.getObject(rq)
         }
     }

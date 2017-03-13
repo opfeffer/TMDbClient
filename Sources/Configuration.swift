@@ -11,6 +11,6 @@ import Foundation
 public struct Configuration: JSONInitializing {
 
     init(json: JSON) throws {
-        
+
     }
 }

@@ -13,10 +13,17 @@ extension Promise {
     }
 }
 
+
 //: TMDbClient initialization
 
 TMDbClient.initialize(with: "b427bda9569b7902569fb64df79d3ed8", logs: true)
 
+
 //: Movie namespace
 
-TMDbClient.Movies.details(movieId: 171372, appends: [.credits, .releases]).finishPlaygroundExecution()
+ TMDbClient.Movies.details(movieId: 171372, appends: [.credits]).then { print($0) }.finishPlaygroundExecution()
+//TMDbClient.Movies.credits(movieId: 171372).then { print($0) }.finishPlaygroundExecution()
+
+//: People namespace
+
+//TMDbClient.People.details(personId: 123, appends: [.externalIds]).finishPlaygroundExecution()

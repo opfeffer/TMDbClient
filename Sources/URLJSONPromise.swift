@@ -81,5 +81,6 @@ public enum URLSessionError: Swift.Error {
 public enum SerializationError: Swift.Error {
     case emptyResponse
     case unexpectedRootNode(Any)
-    case missingProperty
+    case missingProperty(String)
+    case transformFailed
 }

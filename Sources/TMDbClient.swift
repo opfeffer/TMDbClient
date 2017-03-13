@@ -56,7 +56,7 @@ public class TMDbClient {
 
     /// Fetches JSON and attempts to initialize object adhering to `JSONInitializing`.
     class func getObject<T: JSONInitializing>(_ route: TMDbRoute) -> Promise<T> {
-        return get(route).then { (_, _, json) -> T in
+        return get(route).then(on: .global()) { (_, _, json) -> T in
             guard let json = json else { throw URLSessionError.noJSONPayload }
 
             return try T(json: json)
@@ -73,6 +73,7 @@ public class TMDbClient {
         }
     }
 
+    /// Turns a given TMDbRoute into a URLSession-friendly `URLRequest` object.
     private class func urlRequest(for route: TMDbRoute) throws -> URLRequest {
         let url = baseUrl.appendingPathComponent(route.path)
         guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else { throw Error.badUrl }
